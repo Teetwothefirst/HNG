@@ -51,14 +51,14 @@
                     <img src="./slackProfileImg.jpg" alt="SlackImg" data-testid="slackDisplayImage" width="250px" height="250px">
                 </div>
                 <div class="content">
-                    <h3 data-testid="slackUserName">Slack Username: </h3>
+                    <h3 data-testid="slackUserName">Adetomiwa Adejumo </h3>
                     <div class="content-time">
-                        <h4>Current time: <span id="getTimeUTC" data-testid="currentUTCTime"></span></h4>
-                        <h4>Current Date of the week: <span id="getDOW" data-testid="currentDayOfTheWeek"></span></h4>
+                        <h4 id="getTimeUTC" data-testid="currentUTCTime"><span ></span></h4>
+                        <h4 id="getDOW" data-testid="currentDayOfTheWeek"></h4>
                     </div>
                     <div class="footer">
                         <p class="text-muted" data-testid="myTrack"> Track: Front-end</p>
-                        <a href="#" data-testid="githubURL"> GitHub URL</a>
+                        <a href="https://github.com/Teetwothefirst/HNG_stageOne" data-testid="githubURL"> GitHub URL</a>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,19 @@
 
 
     <script>
+        function toUTC(){
+            const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            const newDate = document.getElementById('getDOW')
+            let d = new Date();
+            newDate.innerHTML  = weekday[d.getDay()];
+
+            const UTCTime = document.getElementById('getTimeUTC');
+            let u = new Date();
+            UTCTime.innerHTML = u.toUTCString();
+
+        }
+        toUTC();
 
     </script>
 </body>
-</html>
+</html>    
