@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HNG_StageOne</title>
+    <style>
+        .container{
+            width: 100%;
+            height: 100%;
+
+        }
+        .row{
+            padding: 30px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .text-muted{
+            color: grey;
+
+        }
+        img{
+            border-radius: 20%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HNG Stage One</h1>
+    </header>
+    <main>
+        <!-- Attach Image of my profile -->
+        <!-- Make sure to use data-testid in slack username. display picture cuurent day ofthe week current time in utc -->
+        <!-- Get the real time in UTC -->
+        <!-- Get the real time in  -->
+        <!-- Display Slack Username -->
+        <!-- Current Date of the week you can also make it  -->
+
+        <div class="container">
+            <div class="row">
+                <div class="img-container">
+                    <img src="./slackProfileImg.jpg" alt="SlackImg" data-testid="slackDisplayImage" width="250px" height="250px">
+                </div>
+                <div class="content">
+                    <h3 data-testid="slackUserName">Slack Username: </h3>
+                    <div class="content-time">
+                        <h4>Current time: <span id="getTimeUTC" data-testid="currentUTCTime"></span></h4>
+                        <h4>Current Date of the week: <span id="getDOW" data-testid="currentDayOfTheWeek"></span></h4>
+                    </div>
+                    <div class="footer">
+                        <p class="text-muted" data-testid="myTrack"> Track: Front-end</p>
+                        <a href="#" data-testid="githubURL"> GitHub URL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+
+    </script>
+</body>
+</html>
