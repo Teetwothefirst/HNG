@@ -41,9 +41,8 @@
         <!-- Attach Image of my profile -->
         <!-- Make sure to use data-testid in slack username. display picture cuurent day ofthe week current time in utc -->
         <!-- Get the real time in UTC -->
-        <!-- Get the real time in  -->
         <!-- Display Slack Username -->
-        <!-- Current Date of the week you can also make it  -->
+        <!-- Current Day of the week -->
 
         <div class="container">
             <div class="row">
@@ -53,11 +52,11 @@
                 <div class="content">
                     <h3 data-testid="slackUserName">Adetomiwa Adejumo </h3>
                     <div class="content-time">
-                        <h4 id="getTimeUTC" data-testid="currentUTCTime"><span ></span></h4>
+                        <h4 id="getTimeUTC" data-testid="currentUTCTime"></h4>
                         <h4 id="getDOW" data-testid="currentDayOfTheWeek"></h4>
                     </div>
                     <div class="footer">
-                        <p class="text-muted" data-testid="myTrack"> Track: Front-end</p>
+                        <p class="text-muted" data-testid="myTrack"> Front-end</p>
                         <a href="https://github.com/Teetwothefirst/HNG_stageOne" data-testid="githubURL"> GitHub URL</a>
                     </div>
                 </div>
@@ -68,10 +67,10 @@
 
     <script>
         function toUTC(){
-            const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            const useWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
             const newDate = document.getElementById('getDOW')
             let d = new Date();
-            newDate.innerHTML  = weekday[d.getDay()];
+            newDate.innerHTML  = useWeek[d.getDay()];
 
             const UTCTime = document.getElementById('getTimeUTC');
             let u = new Date();
