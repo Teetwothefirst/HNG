@@ -18,6 +18,7 @@ Social links list (one element containing the links) — data-testid="test-user-
     - Each link item may have data-testid="test-user-social-<network>" (e.g. test-user-social-twitter)
 Hobbies (list) — data-testid="test-user-hobbies"
 Dislikes (list) — data-testid="test-user-dislikes"
+
 All data-testid attributes are required exactly as shown so tests are stable.
 HTML & semantics
 Use semantic tags. Example suggestions:
@@ -33,6 +34,7 @@ Card must look good on mobile, tablet, and desktop.
 On small screens, stack content vertically; on wider screens, arrange avatar to the left and text to the right (or any clean layout).
 Use CSS that doesn’t break layout when content length changes (word-wrap, truncation with accessible expansion, etc.)
 Behavior / Implementation guidance
+
 The time in milliseconds should be accurate and reflect Date.now() at render or on an update tick (if you choose to update it, do so reasonably.
 Avatar should accept either a URL or an uploaded image (if upload used, the component must ultimately display an image URL).
 Social links should open in a new tab (target="_blank") with rel="noopener noreferrer".
