@@ -7,6 +7,7 @@ TASK EXPLAINER VIDEO : https://vm.tiktok.com/ZMAXLFy8s/
 Study material (recommended)
 HTML semantics & accessibility: https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 Accessible images & alt text: https://developer.mozilla.org/en-US/docs/Web/Accessibility/Images
+
 Task — Profile Card (core requirements)
 Required content (each item must exist and include the specified data-testid)
 Profile card root container — data-testid="test-profile-card"
@@ -22,8 +23,8 @@ Dislikes (list) — data-testid="test-user-dislikes"
 All data-testid attributes are required exactly as shown so tests are stable.
 HTML & semantics
 Use semantic tags. Example suggestions:
-Wrap the card in <article> (test-profile-card)
-Name inside a <header> or an <h2> with aria-label as needed
+Wrap the card in article (test-profile-card)
+Name inside a header or an h2 with aria-label as needed
 Bio in a <p>
 Avatar inside a <figure> with <img> and <figcaption> (if caption used)
 Social links inside a <nav> or <ul>
