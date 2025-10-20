@@ -27,16 +27,13 @@
           display: flex;
           gap: 10px;
         }
-        .social-links > li > i {
-          /* background-image: linear-gradient(36deg, purple, gold); */
-          color: gold;
-        }
+
         @media screen and (max-width: 960px){
           article{
             display: flex;
             flex-direction: column;
             padding: 20px;
-            background-color: purple;
+            background-color: rgba(128, 0, 128, 0.5);
           }
         }
 
@@ -45,7 +42,7 @@
             display: flex;
             flex-direction: row;
             padding: 15px 10px;
-            background-color: rgb(129, 83, 129);
+            background-color: rgba(129, 83, 129, 0.5);
           }
         }
     </style>
@@ -65,12 +62,13 @@
       <!-- Short Bio -->
       <p data-testid="test-user-bio">
         A Software Engineer with a knack for precision, scalability, Reliability and efficeincy.
-        Results-driven Software Engineer specializing in AI and full-stack development. 
+        Results-driven Engineer specializing in AI and full-stack development. 
         Proven ability to build scalable applications and solve complex problems in agriculture, healthcare, and automation. 
         Combines technical expertise in AI, robotics, and data engineering with a creative, design-thinking approach to deliver impactful user experiences.
       </p>
       <!-- Current Time -->
-      <div id="currentTime" data-testid="test-user-time"></div>
+       <span>Current Time in Milliseconds: </span>
+      <span id="currentTime" data-testid="test-user-time"></span>
       
       <!-- Hobbies -->
       <section>
@@ -93,8 +91,12 @@
 
       <!-- Social Media Links -->
       <ul data-testid="test-user-social-links" class="social-links">
-        <li data-testid="test-user-social-twitter"><i class="bi bi-twitter-x"></i></li>
-        <li data-testid="test-user-social-instagram"><i class="bi bi-instagram"></i></li>
+        <li data-testid="test-user-social-twitter">
+          <a href="https://x.com/Teetwo__?t=VrCmDibmWlMIj8iOC5OxAg&s=09" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        </li>
+        <li data-testid="test-user-social-instagram">
+          <a href="https://www.instagram.com/teetwothefirst?igsh=eDliZWJ5a2I5N2p4&utm_source=qr" target="_blank"><i class="bi bi-instagram"></i></a>
+        </li>
       </ul>
       
     </main>
@@ -102,7 +104,8 @@
 
   <script>
     // Logic to display Time
-    document.getElementById('currentTime').innerText = 'today'
+    const now = Date.now()
+    document.getElementById('currentTime').innerText = now
   </script>
 </body>
 </html>
