@@ -16,6 +16,7 @@
         li{
             list-style-type: none;
         }
+
         @media screen and (max-width:960px) {
             aside{
                 display: none;
@@ -29,10 +30,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            }
         }
 
-
-            }
         @media screen and (min-width: 961px) and (max-width: 1400px){
         main{
             display: flex;
@@ -55,11 +55,11 @@
             width: 100%;
             padding: 0 10px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
         }
     }
-
     </style>
 </head>
 <body>
@@ -67,20 +67,29 @@
         <aside>
             <h1>I create, I build, I deliver</h1>
         </aside>
-          <section>
-        <h2 data-testid="test-contact-name">Adetomiwa Adejumo</h2>
-        <h4 data-testid=""></h4>
-        <p data-testid="test-about-bio">Creative and Resourceful Software Engineer building systems that scale with relaibility.</p>
-        <ul data-testid="test-about-goals">
-            <li>Master's in Software Engineering</li>
-            <li></li>
-        </ul>
-        <ul data-testid="test-about-confidence">
-            <li></li>
-        </ul>
-        <p data-testid="test-about-future-note"></p>
-        <p data-testid="test-about-extra"></p>
-    </section>
+
+        <section>
+            <article>
+                <h2 data-testid="test-contact-name">Adetomiwa Adejumo</h2>
+                <h4 data-testid="">About Me</h4>
+                <p data-testid="test-about-bio">Creative and Resourceful Software Engineer building systems that scale with relaibility.</p>
+                <ul data-testid="test-about-goals">
+                    <h5>Goals for the Program</h5>
+                    <li>Carry knowledge learnt here into a Master's in Software Engineering</li>
+                    <li>Reach the last stage of the Program</li>
+                    <li>Really feel like edge in Frontend Development</li>
+                </ul>
+                <ul data-testid="test-about-confidence">
+                    <h5>Areas of Low Confidence</h5>
+                    <li>Highly possible to procrastinate</li>
+                    <li>Don't like anything that might stress me</li>
+                    
+                </ul>
+                <p data-testid="test-about-future-note">Do what you said you would do. Finish what you started</p>
+                <p data-testid="test-about-extra">Ever feel the need or urge that you might not be enough. Always know that you got you and you're always enough <i class="bi bi-heart-fill"></i></p>
+            
+            </article>
+        </section>
     </main>
   
    
