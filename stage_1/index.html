@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
+    <title>HNG Stage 1</title>
+
+    <!-- Theme Shades of Purple; Colors to be mixed - White, Black and Shades of Purple  -->
+    <style>
+        body{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        article{
+          border: 2px solid black;
+          border-radius: 20px;
+          box-shadow: 1px 1px 7px 2px rgba(0, 0, 0, 0.9);
+
+        }
+        li{
+          list-style: none;
+        }
+        .social-links{
+          display: flex;
+          gap: 10px;
+        }
+
+        @media screen and (max-width: 960px){
+          article{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color: rgba(128, 0, 128, 0.5);
+          }
+        }
+
+        @media screen and (min-width: 961px) {
+          article{
+            display: flex;
+            flex-direction: row;
+            padding: 15px 10px;
+            background-color: rgba(129, 83, 129, 0.5);
+          }
+        }
+    </style>
+</head>
+<body>
+  <article data-testid="test-profile-card">
+    <header>
+      <!-- Avatar Image -->
+          <figure data-testid="test-user-avatar">
+              <img src="./assets/adetomiwa.png" alt="" width="250px" height="300px">
+              <figcaption>Avatar Image of HNG Intern</figcaption>
+          </figure>
+      <!-- HNG Intern's Name -->
+      <h2 data-testid="test-user-name">Adetomiwa Adejumo</h2>
+    </header>
+    <main>                
+      <!-- Short Bio -->
+      <p data-testid="test-user-bio">
+        A Software Engineer with a knack for precision, scalability, Reliability and efficeincy.
+        Results-driven Engineer specializing in AI and full-stack development. 
+        Proven ability to build scalable applications and solve complex problems in agriculture, healthcare, and automation. 
+        Combines technical expertise in AI, robotics, and data engineering with a creative, design-thinking approach to deliver impactful user experiences.
+      </p>
+      <!-- Current Time -->
+       <span>Current Time in Milliseconds: </span>
+      <span id="currentTime" data-testid="test-user-time"></span>
+      
+      <!-- Hobbies -->
+      <section>
+        <ul data-testid="test-user-hobbies">
+          <li><strong>Hobbies</strong></li>
+          <li>Sports: Football, Track Event, Swimming</li>
+          <li>Curiosity</li>
+          <li>Trying out new places and food</li>
+        </ul>
+      </section>
+
+      <!-- Dislikes -->
+      <section>
+        <ul data-testid="test-user-dislikes">
+          <li><strong>Disklike</strong></li>
+          <li>Extreme Temperatures</li>
+          <li>Lagging Systems/PC</li>
+        </ul>
+      </section>
+      <section>
+        <a href="aboutUs.html">Learn More about me</a>
+        <a href="contact.html">Contact</a>
+      </section>
+      <!-- Social Media Links -->
+      <ul data-testid="test-user-social-links" class="social-links">
+        <li data-testid="test-user-social-twitter">
+          <a href="https://x.com/Teetwo__?t=VrCmDibmWlMIj8iOC5OxAg&s=09" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        </li>
+        <li data-testid="test-user-social-instagram">
+          <a href="https://www.instagram.com/teetwothefirst?igsh=eDliZWJ5a2I5N2p4&utm_source=qr" target="_blank"><i class="bi bi-instagram"></i></a>
+        </li>
+      </ul>
+      
+    </main>
+  </article>
+
+  <script>
+    // Logic to display Time
+    const now = Date.now()
+    document.getElementById('currentTime').innerText = now
+  </script>
+</body>
+</html>
