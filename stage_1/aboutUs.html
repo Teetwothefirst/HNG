@@ -8,16 +8,71 @@
     <title>HNG Stage 1</title>
 
     <!-- Theme Shades of Purple; Colors to be mixed - White, Black and Shades of Purple  -->
-    
+    <style>
+        body{
+                padding: 0;
+                margin: 0;
+            }
+        li{
+            list-style-type: none;
+        }
+        @media screen and (max-width:960px) {
+            aside{
+                display: none;
+            }
+            section {
+            color: purple;
+            background-color: white;
+            height: 100%;
+            width: 100%;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+            }
+        @media screen and (min-width: 961px) and (max-width: 1400px){
+        main{
+            display: flex;
+            height: 100vh;
+        }
+        aside{
+            width: 100%;
+            height: 100%;
+            background-color: purple;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+        }
+        section {
+            color: purple;
+            background-color: white;
+            height: 100%;
+            width: 100%;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    </style>
 </head>
 <body>
     <main data-testid="test-about-page">
-        
+        <aside>
+            <h1>I create, I build, I deliver</h1>
+        </aside>
           <section>
         <h2 data-testid="test-contact-name">Adetomiwa Adejumo</h2>
         <h4 data-testid=""></h4>
-        <p data-testid="test-about-bio"></p>
+        <p data-testid="test-about-bio">Creative and Resourceful Software Engineer building systems that scale with relaibility.</p>
         <ul data-testid="test-about-goals">
+            <li>Master's in Software Engineering</li>
             <li></li>
         </ul>
         <ul data-testid="test-about-confidence">
