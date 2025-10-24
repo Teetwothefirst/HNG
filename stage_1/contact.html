@@ -82,26 +82,50 @@
             </aside>
             <section>
                 
-            <form action="">
+            <form action="" id="formData">
                 <h1>Contact us</h1>
-                <span class="errorMessage" data-testid=""></span>
-                <span class="successMessage" data-testid="test-contact-success"></span>
+                
                 <label for="fullname">Full Name</label>
                 <input type="text" name="fullname" id="fullname" data-testid="test-contact-name" required>
+                <span class="errorMessage" data-testid="test-contact-error-name" id="errorname"></span>
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" data-testid="test-contact-email" required>
+                <span class="errorMessage" data-testid="test-contact-error-email" id="erroremail"></span>
                 <label for="subject">Subject</label>
                 <input type="text" name="subject" id="subject" data-testid="test-contact-subject" required minlength="10">
+                <span class="errorMessage" data-testid="test-contact-error-subject" id="errorsubject"></span>
                 <label for="message">Message</label>
                 <textarea name="message" id="message" data-testid="test-contact-message" required></textarea><br>
+                <span class="errorMessage" data-testid="test-contact-error-message" id="errormessage"></span>
                 <button type="submit" data-testid="test-contact-submit">Submit</button>
+                <span class="successMessage" data-testid="test-contact-success"></span>
             </form>
             </section>
             
         </main>
 
         <script>
+            document.getElementById('formData').addEventListener('submit',(e)=>{
+               e.preventDefault()
+               let valid = true;
 
+               const name = fullname.value.trim
+               const email = document.getElementById('email')
+               const subject = subject.value.trim
+               const message = message.value.trim
+
+               document.querySelectorAll('.errorMessage').forEach(err =>{err.textContent = ''})
+
+               if(!name){ valid=false; errorname.textContent='Full Name is Required'; }
+               if(!email.matches(/^[^@]+@[^@]+\.[^@]+$/)){valid=false; erroremail.textContent=`Email isn't correct`}
+               if(message < 10){valid=false; errormessage.textContent = 'Message should not be less than 10'}
+               const success = document.querySelector('[data-testid="test-contact-success"]');
+                if(valid){
+                    success.textContent = 'Message sent successfully!';
+                } else {
+                    success.textContent = '';
+                }
+            })
         </script>
     </body>
 </html>

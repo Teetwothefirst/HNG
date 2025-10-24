@@ -13,10 +13,10 @@
                 padding: 0;
                 margin: 0;
             }
-        li{
+        /* li{
             list-style-type: none;
-        }
-        h4,h5{
+        } */
+        h3,h5{
             margin: 0;
         }
 
@@ -51,6 +51,10 @@
             justify-content: center;
             padding: 0 20px;
         }
+        aside > a{
+            color: white;
+            padding: 0 15px;
+        }
         section {
             color: purple;
             background-color: white;
@@ -69,12 +73,14 @@
     <main data-testid="test-about-page">
         <aside>
             <h1>I create, I build, I deliver</h1>
+            <a href="./contact.html">Reach out</a>
         </aside>
 
         <section>
+            <h2 data-testid="test-contact-name">Adetomiwa Adejumo</h2>
             <article>
-                <h2 data-testid="test-contact-name">Adetomiwa Adejumo</h2>
-                <h4 data-testid="">About Me</h4>
+                
+                <h3 data-testid="test-about-me">About Me</h3>
                 <p data-testid="test-about-bio">Creative and Resourceful Software Engineer building systems that scale with relaibility.</p>
                 <ul data-testid="test-about-goals">
                     <h5>Goals for the Program</h5>
