@@ -109,15 +109,15 @@
                e.preventDefault()
                let valid = true;
 
-               const name = fullname.value.trim
-               const email = document.getElementById('email')
-               const subject = subject.value.trim
-               const message = message.value.trim
+                 const name = document.getElementById('fullname').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const subjectValue = document.getElementById('subject').value.trim();
+                    const message = document.getElementById('message').value.trim();
 
                document.querySelectorAll('.errorMessage').forEach(err =>{err.textContent = ''})
 
                if(!name){ valid=false; errorname.textContent='Full Name is Required'; }
-               if(!email.matches(/^[^@]+@[^@]+\.[^@]+$/)){valid=false; erroremail.textContent=`Email isn't correct`}
+               if(!email.match(/^[^@]+@[^@]+\.[^@]+$/)){valid=false; erroremail.textContent=`Email isn't correct`}
                if(message < 10){valid=false; errormessage.textContent = 'Message should not be less than 10'}
                const success = document.querySelector('[data-testid="test-contact-success"]');
                 if(valid){
