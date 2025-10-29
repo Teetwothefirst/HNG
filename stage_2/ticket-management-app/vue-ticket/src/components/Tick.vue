@@ -269,7 +269,7 @@ const TicketManagement = {
 };
 
 // --- 6. Main App Logic (merged into single <script setup>) ---
-const currentPage = ref('landing');
+const currentPage = ref('dashboard');
 
 onMounted(() => {
   const session = localStorage.getItem('ticketapp_session');
@@ -304,7 +304,7 @@ const handleNavigate = (page) => {
 </script>
 
 <template>
-  <div id="app" class="font-sans min-h-screen">
+  <div id="ticket-app" class="font-sans min-h-screen">
     <LandingPage v-if="currentPage === 'landing'" @navigate="handleNavigate" />
     <AuthPage v-else-if="currentPage === 'login'" mode="login" :onNavigate="handleNavigate" :onLogin="handleLogin" />
     <AuthPage v-else-if="currentPage === 'signup'" mode="signup" :onNavigate="handleNavigate" :onLogin="handleLogin" />

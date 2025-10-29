@@ -1,10 +1,11 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import Tick from './components/Tick.vue';
+// import HelloWorld from './components/HelloWorld.vue'
+// import Tick from './components/Tick.vue';
+import WebPage from './components/WebPage.vue';
 </script>
 
 <template>
-  <div>
+  <!-- <div>
     <a href="https://vite.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
@@ -12,8 +13,10 @@ import Tick from './components/Tick.vue';
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
-  <Tick />
+  <HelloWorld msg="Vite + Vue" /> -->
+  <!-- <h1>Hello World</h1> -->
+  <!-- <Tick /> -->
+  <WebPage />
 </template>
 
 <style scoped>
