@@ -1,0 +1,58 @@
+{% extends 'layout/base.html.twig' %}
+
+{% block title %}Dashboard - TicketFlow{% endblock %}
+
+{% block body %}
+{% include 'layout/header.html.twig' with {
+    header_actions: '<button id="logoutBtn" class="btn btn-danger">Logout</button>'
+} only %}
+
+<div class="container py-12">
+    <h2 class="mb-8">Welcome Back!</h2>
+    
+    <div class="stats-grid mb-8">
+        <div class="card stat-card">
+            <p class="stat-label">Total Tickets</p>
+            <p class="stat-value blue" id="statTotal">0</p>
+        </div>
+        
+        <div class="card stat-card">
+            <p class="stat-label">Open</p>
+            <p class="stat-value green" id="statOpen">0</p>
+        </div>
+        
+        <div class="card stat-card">
+            <p class="stat-label">In Progress</p>
+            <p class="stat-value amber" id="statInProgress">0</p>
+        </div>
+        
+        <div class="card stat-card">
+            <p class="stat-label">Closed</p>
+            <p class="stat-value gray" id="statClosed">0</p>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h3 class="mb-4">Quick Actions</h3>
+        <a href="/tickets" class="btn btn-primary">📋 Manage Tickets</a>
+    </div>
+</div>
+
+{% include 'layout/footer.html.twig' %}
+{% endblock %}
+
+{% block javascripts %}
+<script src="/js/auth.js"></script>
+<script>
+    checkAuth();
+    
+    // Load stats
+    const tickets = JSON.parse(localStorage.getItem('ticketapp_tickets') || '[]');
+    document.getElementById('statTotal').textContent = tickets.length;
+    document.getElementById('statOpen').textContent = tickets.filter(t => t.status === 'open').length;
+    document.getElementById('statInProgress').textContent = tickets.filter(t => t.status === 'in_progress').length;
+    document.getElementById('statClosed').textContent = tickets.filter(t => t.status === 'closed').length;
+    
+    document.getElementById('logoutBtn').addEventListener('click', logout);
+</script>
+{% endblock %}
